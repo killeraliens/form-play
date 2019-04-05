@@ -1,4 +1,4 @@
-<?php
+<?php include_once("index.html");
 
 $from = 'Contact form from <alexandrabrinncampbell@gmail.com>';
 $sendTo = 'Demo contact form <alexandrabrinncampbell@gmail.com>';
