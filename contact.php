@@ -1,4 +1,4 @@
-<?php include_once("index.html");
+<?php
 
 $from = 'Contact form from <alexandrabrinncampbell@gmail.com>';
 $sendTo = 'Demo contact form <alexandrabrinncampbell@gmail.com>';
@@ -43,4 +43,17 @@ catch (\Exception $e)
     $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 }
 
-?>
+
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+// else just display the message
+else {
+    echo $responseArray['message'];
+}
+
