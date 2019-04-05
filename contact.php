@@ -1,7 +1,7 @@
 <?php
 
-$from = 'Contact form from <alexandrabrinncampbell@gmail.com>';
-$sendTo = 'Demo contact form <alexandrabrinncampbell@gmail.com>';
+$from = 'alexandrabrinncampbell@gmail.com';
+$sendTo = 'alexandrabrinncampbell@gmail.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
 
